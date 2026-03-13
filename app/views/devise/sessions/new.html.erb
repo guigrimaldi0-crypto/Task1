@@ -1,0 +1,30 @@
+<div class="vh-100 d-flex justify-content-center align-items-center bg-light">
+
+  <div class="card shadow-lg p-4" style="width: 400px; border-radius: 15px;">
+
+    <div class="text-center mb-4">
+      <h3 class="fw-bold">Sistema Administrativo 🚗</h3>
+      <p class="text-muted">Faça login para continuar</p>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="mb-3">
+        <%= f.label :login, "Usuário ou Email", class: "form-label" %>
+        <%= f.text_field :login, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, class: "form-label" %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+
+      <div class="d-grid">
+        <%= f.submit "Entrar", class: "btn btn-primary" %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

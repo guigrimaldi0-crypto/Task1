@@ -69,5 +69,5 @@ gem "devise"
 gem "simple_form"
 gem "bootstrap", "~> 5.3"
 gem "sassc-rails"
-
-gem "importmap-rails"
+gem "ransack"
+gem "pagy", "~> 6.0"
