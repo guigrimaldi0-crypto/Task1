@@ -10,12 +10,12 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="mb-3">
-        <%= f.label :login, "Usuário ou Email", class: "form-label" %>
-        <%= f.text_field :login, autofocus: true, class: "form-control" %>
+        <%= f.label :email, "Email", class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="mb-3">
-        <%= f.label :password, class: "form-label" %>
+        <%= f.label :password, "Senha", class: "form-label" %>
         <%= f.password_field :password, class: "form-control" %>
       </div>
 
@@ -24,6 +24,12 @@
       </div>
 
     <% end %>
+
+    <div class="text-center mt-3">
+      <%= link_to "👤 Cadastrar Novo Usuário",
+                  new_user_registration_path,
+                  class: "btn btn-outline-secondary btn-sm" %>
+    </div>
 
   </div>
 
